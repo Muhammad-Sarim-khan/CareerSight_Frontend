@@ -53,7 +53,7 @@ export default function Home() {
     try {
       setLoading(true);
       setResponse('');
-      const res = await fetch('http://localhost:8000/analyze_resume', {
+      const res = await fetch('https://web-production-1223.up.railway.app/analyze_resume', {
         method: 'POST',
         body: formData,
       });
