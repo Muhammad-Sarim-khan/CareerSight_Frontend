@@ -50,6 +50,9 @@ export default function JobRoleExpansionPage() {
         <Briefcase className="w-8 h-8 text-purple-600" />
         AI-powered Job Role Expansion
       </h1>
+      <p className=" text-black font-semibold mb-8 mt-4 text-xl  tracking-wide">
+          Explore other career options based on your skills.
+        </p>
 
       <Card className="bg-white shadow-lg">
         <CardContent>

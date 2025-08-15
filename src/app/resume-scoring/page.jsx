@@ -201,6 +201,8 @@ export default function ResumeScoringPage() {
         <ClipboardList className="w-8 h-8 text-blue-600" />
         Resume Scoring Dashboard
       </h1>
+      <p className=" text-black font-semibold mb-8 mt-4 text-xl tracking-wide ">Evaluate your resume’s relevance and strength against any job description.
+        </p>
 
       <Card className="bg-white shadow-lg">
         <CardContent>

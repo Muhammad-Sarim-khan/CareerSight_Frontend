@@ -53,6 +53,9 @@ export default function ResumeRewritePage() {
         <PenLine className="w-8 h-8 text-green-600" />
         AI-powered Resume Rewrite
       </h1>
+      <p className=" text-black font-semibold mb-8 mt-4 text-xl  tracking-wide">
+          Turn your existing resume into a polished, job-targeted document.
+        </p>
 
       <Card className="bg-white shadow-lg">
         <CardContent>
