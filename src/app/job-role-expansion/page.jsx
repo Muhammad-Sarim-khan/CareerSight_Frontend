@@ -25,7 +25,7 @@ export default function JobRoleExpansionPage() {
     formData.append("resume", resumeFile);
 
     try {
-      const res = await fetch("https://web-production-328d7.up.railway.app/job_role_expansion", {
+      const res = await fetch("https://web-production-210ac.up.railway.app/job_role_expansion", {
         method: "POST",
         body: formData,
       });
