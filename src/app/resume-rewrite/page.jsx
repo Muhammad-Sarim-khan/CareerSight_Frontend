@@ -28,7 +28,7 @@ export default function ResumeRewritePage() {
     formData.append("resume", resumeFile);
 
     try {
-      const res = await fetch("https://web-production-1223.up.railway.app/resume_rewrite", {
+      const res = await fetch("https://web-production-328d7.up.railway.app/resume_rewrite", {
         method: "POST",
         body: formData,
       });
