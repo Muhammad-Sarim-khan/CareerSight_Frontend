@@ -32,7 +32,7 @@ export default function Sidebar({ children }) {
       >
         {/* Toggle Button */}
         <button
-          className="mb-6 text-sm bg-gray-700 px-2 py-1 rounded w-full"
+          className="mb-6 text-sm bg-gray-700 px-2 py-1 rounded w-full cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "Close" : "☰"}
@@ -82,7 +82,7 @@ export default function Sidebar({ children }) {
         <header className="bg-gray-900 text-white p-4 shadow-md flex items-center">
           {isMobile && (
             <button
-              className="bg-gray-700 px-3 py-2 rounded mr-4"
+              className="bg-gray-700 px-3 py-2 rounded mr-4 cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
             >
               ☰

@@ -222,7 +222,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           <button
             onClick={() => handleSubmit('resume_review')}
-            className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
+            className="flex items-center justify-center cursor-pointer gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
           >
             <FileText size={20} />
             Review Resume
@@ -230,7 +230,7 @@ export default function Home() {
 
           <button
             onClick={() => handleSubmit('skills_improvement')}
-            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
+            className="flex items-center justify-center cursor-pointer gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
           >
             <Lightbulb size={20} />
             Improve My Skills
@@ -238,7 +238,7 @@ export default function Home() {
 
           <button
             onClick={() => handleSubmit('percentage_match')}
-            className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
+            className="flex items-center justify-center cursor-pointer gap-2 bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
           >
             <Gauge size={20} />
             Match Percentage
