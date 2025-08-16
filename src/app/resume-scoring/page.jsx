@@ -263,12 +263,12 @@ export default function ResumeScoringPage() {
       {result && (
         <Card className="mt-6 bg-gray-50 shadow-lg">
           <CardHeader>
-            <CardTitle>Scores & Details</CardTitle>
+            <CardTitle className='text-2xl'>Resume Scores</CardTitle>
           </CardHeader>
           <CardContent>
             {result.resume_score && (
               <>
-                <h2 className="text-xl font-bold mb-2">Scores</h2>
+                {/* <h2 className="text-xl font-bold mb-2">Scores</h2> */}
                 <ul className="space-y-4">
                   {renderScores(result.resume_score)}
                 </ul>
@@ -276,7 +276,7 @@ export default function ResumeScoringPage() {
             )}
             {result.category_details && (
               <>
-                <h2 className="text-xl font-bold mt-6 mb-4">Details</h2>
+                {/* <h2 className="text-xl font-bold mt-6 mb-4">Details</h2> */}
                 {renderScores(result.category_details, true)}
               </>
             )}
