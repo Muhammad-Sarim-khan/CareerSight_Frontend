@@ -7,7 +7,6 @@ export default function Sidebar({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect screen size for mobile/desktop mode
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
     handleResize();
@@ -18,7 +17,7 @@ export default function Sidebar({ children }) {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* Sidebar */}
+     
       <div
         className={`bg-gray-800 text-white p-4 transition-all duration-300 ease-in-out z-50 fixed top-0 left-0 h-screen 
           ${isMobile
@@ -30,15 +29,12 @@ export default function Sidebar({ children }) {
             : "w-20"}
         `}
       >
-        {/* Toggle Button */}
         <button
           className="mb-6 text-sm bg-gray-700 px-2 py-1 rounded w-full cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "Close" : "☰"}
         </button>
-
-        {/* Navigation Links */}
         <nav className="space-y-3 ml-1">
           <Link
             href="/resume-scoring"
@@ -72,13 +68,11 @@ export default function Sidebar({ children }) {
         </nav>
       </div>
 
-      {/* Content Area */}
       <div
         className={`flex-1 flex flex-col transition-all duration-300
           ${isMobile ? "ml-0" : isOpen ? "ml-64" : "ml-20"}
         `}
       >
-        {/* Top Bar */}
         <header className="bg-gray-900 text-white p-4 shadow-md flex items-center">
           {isMobile && (
             <button
@@ -91,7 +85,6 @@ export default function Sidebar({ children }) {
           <Link href='/' className="text-2xl font-bold ">CareerSight</Link>
         </header>
 
-        {/* Main Content */}
         <main>{children}</main>
       </div>
     </div>

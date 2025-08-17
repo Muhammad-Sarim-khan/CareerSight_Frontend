@@ -5,7 +5,7 @@ const JobContext = createContext();
 
 export const JobProvider = ({ children }) => {
   const [jobDescription, setJobDescription] = useState("");
-  const [resumeFile, setResumeFile] = useState(null); // can store base64 if needed
+  const [resumeFile, setResumeFile] = useState(null); 
   const [resumeName, setResumeName] = useState('');
 
   return (
