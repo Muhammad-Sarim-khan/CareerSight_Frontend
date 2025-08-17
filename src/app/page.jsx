@@ -10,7 +10,7 @@ import { useJob } from '@/context/JobContext';
 import { ArrowPathIcon, ClipboardIcon, CheckIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LLMOutput from './components/LLMOutput';
 export default function Home() {
-  const {jobDescription, setJobDescription,resumeFile, setResumeFile,resumeName, setResumeName} = useJob();
+  const { jobDescription, setJobDescription, resumeFile, setResumeFile, resumeName, setResumeName } = useJob();
   // const [resumeFile, setResumeFile] = useJob();
   // const [resumeName, setResumeName] = useState('');
   const [response, setResponse] = useState('');
@@ -19,6 +19,8 @@ export default function Home() {
   const [error, setError] = useState('');
   const [linkedinURL, setLinkedinURL] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [feature, setFeature] = useState("");
+
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -221,7 +223,7 @@ export default function Home() {
         {/* Buttons */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           <button
-            onClick={() => handleSubmit('resume_review')}
+            onClick={() => { setFeature("resume_review"); handleSubmit('resume_review') }}
             className="flex items-center justify-center cursor-pointer gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
           >
             <FileText size={20} />
@@ -229,7 +231,7 @@ export default function Home() {
           </button>
 
           <button
-            onClick={() => handleSubmit('skills_improvement')}
+            onClick={() => { setFeature("skills_improvement"); handleSubmit('skills_improvement') }}
             className="flex items-center justify-center cursor-pointer gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
           >
             <Lightbulb size={20} />
@@ -237,7 +239,7 @@ export default function Home() {
           </button>
 
           <button
-            onClick={() => handleSubmit('percentage_match')}
+            onClick={() => { setFeature("percentage_match"); handleSubmit('percentage_match') }}
             className="flex items-center justify-center cursor-pointer gap-2 bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition"
           >
             <Gauge size={20} />
@@ -257,7 +259,12 @@ export default function Home() {
         {/* AI Response */}
         {response && !loading && (
           <div className="relative bg-gray-100 border border-gray-300 rounded-xl p-6 whitespace-pre-wrap text-gray-800 shadow-inner backdrop-blur-md bg-opacity-80 transition-all duration-300 hover:shadow-lg animate-fadeIn">
-            <h2 className="text-2xl font-semibold mb-3">AI Response</h2>
+            {/* <h2 className="text-2xl font-semibold mb-3">Resume Evaluation</h2> */}
+            <h2 className="text-2xl font-semibold mb-3">
+              {feature === "resume_review" && "Resume Evaluation"}
+              {feature === "skills_improvement" && "Skills Improvement Suggestions"}
+              {feature === "percentage_match" && "Percentage Match Analysis"}
+            </h2>
             {/* <p>{response}</p> */}
             <LLMOutput text={response}></LLMOutput>
 
